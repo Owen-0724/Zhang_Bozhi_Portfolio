@@ -5,13 +5,45 @@
       url("../font/Polentical\ Neon\ Regular.ttf")
 }
 
+@font-face {
+    font-family: "Induction";
+    src:
+      local("Induction"),
+      url("../font/Induction.otf")
+}
+
 *{
     font-family: Polentical Neon, Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
+
+
+
+
+
 a{
     text-decoration: none;
     color: black;
+}
+
+.spacing_80{
+    height: 80px;
+}
+
+.spacing_160{
+    height: 160px;
+}
+
+header{
+    line-height: 80px;
+    background-color: red;
+}
+
+#menu{
+    display: none;
+    line-height: initial;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #menu ul{
@@ -25,4 +57,52 @@ a{
 
 #menu ul li{
     display: inline;
+}
+
+#welcome_stack{
+    
+    align-items: center;
+    justify-items: center;
+    grid-auto-flow: column;
+}
+
+.home_welcome{
+    font-family: Induction, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #767676;
+    text-align: center;
+
+
+    grid-column-start: 1;
+    margin-bottom: -10px;
+
+    
+    grid-auto-flow: column;
+}
+
+#short_description{
+    text-align: center;
+    line-height: 30px;
+}
+
+#up_icon{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) { 
+    header{
+        line-height: 150px;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    .home_welcome{
+        font-size: 160px;
+        margin-bottom: -60px;
+    }
 }
