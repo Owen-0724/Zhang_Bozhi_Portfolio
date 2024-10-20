@@ -15,6 +15,14 @@ a{
     color: black;
 }
 
+button{
+    border: 0;
+}
+
+#main-header button.expanded {
+    transform: rotate(90deg);
+}
+
 .spacing_20{
     height: 20px;
 }
@@ -66,7 +74,6 @@ header{
 #burger-con{
     display: none;
     position: relative;
-    background-color: black;
     margin-top: 20px;
     margin-bottom: 20px;
     z-index: 2;
