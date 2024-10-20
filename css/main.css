@@ -29,7 +29,7 @@ button{
  
  }
 
-#main-header button.expanded {
+#burger.expanded {
     transform: rotate(90deg);
 }
 
