@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Polentical Neon";
+    src:
+      local("Polentical Neon"),
+      url("../font/Polentical\ Neon\ Regular.ttf")
+}
+
+*{
+    font-family: Polentical Neon, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#menu ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+
+#menu ul li{
+    display: inline;
+}
