@@ -13,7 +13,7 @@
 		<h1 class="hidden">Portfolio</h1>
 		<a href="index.html"  id="header_logo"
 		class="l-col-start-1 l-col-end-2"
-		><img src="">
+		><img src="/images/logo.svg" height="14px">
 		</a>
 		<nav id="menu" class="l-col-start-8 l-col-end-13">
 			<ul>
@@ -22,6 +22,16 @@
 				<li><a href="contact.html">CONTACT</a></li>
 			</ul>
 		</nav>
+
+		<div id="burger-con" class="col-span-full">
+			<ul>
+				<li><a href="projects.html">PROJECTS</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+
+		<img src="/images/bar.svg" class="col-start-4 col-end-5" id="bar" height="17px">
 	</header>
 
 	<section id="home-top" class="grid-con">
@@ -50,14 +60,85 @@ motion designer.
 		<div class="spacing_160 col-span-full"></div>
 	</section>
 
-	
-	<video class="player" poster="images/placeholder.jpg">
-		<source src="video/video.mp4" type="video/mp4">
-		<source src="video/video.webm" type="video/webm">
-		<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
-	</video>
-	<footer>
+	<div class="spacing_60 col-span-full"></div>
+
+	<section class="grid-con" >
+		<h2 class="col-start-2 col-end-5 l-col-start-5 l-col-end-13" id="home_projects">PROJECTS</h2>
+
+		<div class="spacing_60 col-span-full"></div>
+
+		<div class="col-start-1 col-end-4 l-col-start-1 l-col-end-7">
+			<video class="player" id="video_1" poster="images/placeholder.jpg">
+				<source src="video/video.mp4" type="video/mp4">
+				<source src="video/video.webm" type="video/webm">
+				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
+			</video>
+		</div>
 		
+		<div class="spacing_60 col-span-full"></div>
+
+		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">PROJECT NAME</p>
+		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">Project #1</p>
+		<div class="spacing_20 col-span-full"></div>
+		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">DESCRIPTION</p>
+		<p class="col-start-1 col-end-5 l-col-start-8 l-col-end-13">Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis consectetur aliquam posuere laoreet maximus. Mauris curae erat mauris non facilisi nascetur. Vulputate malesuada sapien non aptent, venenatis vulputate lacinia. Sodales per faucibus luctus ut, turpis habitasse ornare nisi.</p>
+		<p class="col-start-4 col-end-5 l-col-start-8 l-col-end-13">YEAR</p>
+		<p class="col-start-4 col-end-5 l-col-start-8 l-col-end-13">2024</p>
+
+		<div class="spacing_60 col-span-full"></div>
+
+		<div class="col-start-1 col-end-4">
+			<video class="player" id="video_2s" poster="images/placeholder.jpg">
+				<source src="video/video.mp4" type="video/mp4">
+				<source src="video/video.webm" type="video/webm">
+				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
+			</video>
+		</div>
+
+		<div class="spacing_60 col-span-full"></div>
+
+		<p class="col-start-1 col-end-4">PROJECT NAME</p>
+		<p class="col-start-1 col-end-4">Project #2</p>
+		<div class="spacing_20 col-span-full"></div>
+		<p class="col-start-1 col-end-4">DESCRIPTION</p>
+		<p class="col-start-1 col-end-5">Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis consectetur aliquam posuere laoreet maximus. Mauris curae erat mauris non facilisi nascetur. Vulputate malesuada sapien non aptent, venenatis vulputate lacinia. Sodales per faucibus luctus ut, turpis habitasse ornare nisi.</p>
+		<p class="col-start-4 col-end-5">YEAR</p>
+		<p class="col-start-4 col-end-5">2024</p>
+
+	</section>
+
+	<div class="spacing_60 col-span-full"></div>
+
+	<section  class="grid-con">
+		<h2 class="hidden">images</h2>
+		<div class="col-start-1 col-span-2 img"></div>
+		<div class="col-start-3 col-span-2 img"></div>
+
+		<div class="col-start-1 col-span-4 img"></div>
+
+		<div class="col-start-1 col-span-2 img"></div>
+		<div class="col-start-3 col-span-2 img"></div>
+	</section>
+
+	<div class="spacing_60 col-span-full"></div>
+
+	<section class="grid-con">
+		<h2 class="col-start-1 col-end-4" id="home_contact">CONTACT</h2>
+
+		<div class="spacing_60 col-span-full"></div>
+
+		<img src="images/chat.svg" height="52px" class="col-span-full" id="chat_icon">
+
+		<div class="spacing_60 col-span-full"></div>
+
+		<p class="col-start-2 col-span-2" id="contct_now">CONTACT NOW</p>
+	</section>
+
+	<div class="spacing_60 col-span-full"></div>
+
+	<footer class="grid-con">
+		<img src="/images/logo.svg" height="14px" class="logo col-start-1 col-span-2" id="footer_logo">
+		<div class="col-start-3 col-span-2" id="footer_3"></div>
 	</footer>
 	<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 	<script src="js/main.js"></script>

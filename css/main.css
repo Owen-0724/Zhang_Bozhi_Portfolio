@@ -1,15 +1,26 @@
 *{
     font-family: Polentical Neon, Arial, Helvetica, sans-serif;
     font-size: 20px;
+    font-weight: normal;
 }
 
 
 
-
+h2{
+    font-size: 24px;
+}
 
 a{
     text-decoration: none;
     color: black;
+}
+
+.spacing_20{
+    height: 20px;
+}
+
+.spacing_60{
+    height: 60px;
 }
 
 .spacing_80{
@@ -45,6 +56,26 @@ header{
     display: inline;
 }
 
+#bar{
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#burger-con{
+    display: none;
+    position: relative;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+#burger-con.slide-toggle {
+    display: block;
+}
+
 #welcome_stack{
     
     align-items: center;
@@ -76,6 +107,59 @@ header{
     margin-right: auto;
 }
 
+#home_projects{
+    height: 30px;
+    background-color: red;
+}
+
+#video_1{
+    height: 190px;
+    background-color: red;
+}
+
+.img{
+    height: 92px;
+    background-color: #767676;
+    color: #767676;
+
+    margin-bottom: 20px;
+}
+
+#home_contact{
+    height: 30px;
+    background-color: red;
+    text-align: right;
+}
+
+#chat_icon{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contct_now{
+    background-color: red;
+
+    text-align: center;
+}
+
+#footer_logo{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#footer_3{
+    height: 20px;
+    background-color: #767676;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+footer{
+    height: 80px;
+    background-color: red;
+    
+}
+
 /*---- desktop ----*/
 
 @media screen and (min-width: 1200px) { 
@@ -91,4 +175,13 @@ header{
         font-size: 160px;
         margin-bottom: -60px;
     }
+
+    #bar,#up_icon{
+        display: none;
+    }
+
+    .plyer{
+        height: 200px;
+    }
+    
 }
