@@ -19,6 +19,16 @@ button{
     border: 0;
 }
 
+#burger{
+    width: 30px;
+    height: 30px;
+    background: url(../images/bar.svg) no-repeat center;
+    align-self: center;
+    justify-self: end;
+    transition: all .5s ease;
+ 
+ }
+
 #main-header button.expanded {
     transform: rotate(90deg);
 }
