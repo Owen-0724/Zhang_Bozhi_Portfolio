@@ -124,6 +124,10 @@ header{
     margin-right: auto;
 }
 
+.line_r{
+    margin-left: 30%;
+}
+
 #home_projects{
     height: 30px;
     background-color: red;
@@ -193,7 +197,7 @@ footer{
         margin-bottom: -60px;
     }
 
-    #bar,#up_icon{
+    #burger,#up_icon{
         display: none;
     }
 
