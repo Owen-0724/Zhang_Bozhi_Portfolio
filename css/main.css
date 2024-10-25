@@ -124,18 +124,39 @@ header{
     margin-right: auto;
 }
 
-.line_r{
-    margin-left: 30%;
-}
-
-#home_projects{
+.line_h2{
     height: 30px;
     background-color: red;
 }
 
-#video_1{
-    height: 190px;
+.line_r{
+    margin-left: 30%;
+}
+
+.line_l{
+    margin-right: 30%;
+
+    text-align: right;
+}
+
+.fill_l{
     background-color: red;
+    height: 100%;
+    width: 37px;
+    grid-row: 2;
+    position: relative;
+    right: 37px;
+}
+
+.player_l{
+    grid-row: 2;
+    z-index: 2;
+}
+
+#video_1{
+    
+    background-color: #767676;
+
 }
 
 .img{
