@@ -1,1 +1,68 @@
-@use '../abstracts' as a;
+button{
+    border: 0;
+}
+
+#burger{
+    width: 30px;
+    height: 30px;
+    background: url(../images/bar.svg) no-repeat center;
+    align-self: center;
+    justify-self: end;
+    transition: all .5s ease;
+ 
+ }
+
+#burger.expanded {
+    transform: rotate(90deg);
+}
+
+header{
+    line-height: 80px;
+    background-color: #26E3FF;
+}
+
+#menu{
+    display: none;
+    line-height: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#menu ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+
+#menu ul li{
+    display: inline;
+}
+
+
+#bar{
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#burger-con{
+    display: none;
+    position: relative;
+    z-index: 2;
+    text-align: right;
+
+    background-color: #2D2D2D;
+
+}
+
+#burger-con ul li{
+    margin-top: 10px;
+}
+
+#burger-con.slide-toggle {
+    display: block;
+}
