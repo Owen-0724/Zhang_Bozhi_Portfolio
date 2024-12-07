@@ -22,6 +22,15 @@ a {
   color: black;
 }
 
+p {
+  font-size: 14px;
+  color: white;
+}
+
+#about_text {
+  margin-bottom: 20px;
+}
+
 .spacing_20 {
   height: 20px;
 }
@@ -107,16 +116,46 @@ header {
   margin-bottom: auto;
 }
 
-#footer_3 {
-  height: 20px;
-  background-color: #767676;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 footer {
   height: 80px;
-  background-color: red;
+  background-color: #26E3FF;
+  margin-top: 60px;
+}
+
+.footer_logo {
+  display: none;
+}
+
+.social_media_group {
+  align-content: center;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+.social_media_group img {
+  display: inline;
+  height: 36px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.more_info {
+  font-size: 20px;
+  color: #2D2D2D;
+  text-align: center;
+  align-self: center;
+  height: 24px;
+  background-color: #26E3FF;
+}
+
+#contct_now {
+  font-size: 16px;
+  color: #2D2D2D;
+  text-align: center;
+  align-self: center;
+  height: 24px;
+  background-color: #26E3FF;
+  margin-top: 20px;
 }
 
 html {
@@ -190,9 +229,9 @@ html {
 }
 
 .img {
-  background-color: #767676;
-  color: #767676;
-  background-size: cover;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -205,11 +244,6 @@ html {
 #chat_icon {
   margin-left: auto;
   margin-right: auto;
-}
-
-#contct_now {
-  background-color: red;
-  text-align: center;
 }
 
 /*---- desktop ----*/
