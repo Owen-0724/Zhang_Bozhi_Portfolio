@@ -18,8 +18,9 @@ h2 {
 }
 
 a {
+  font-size: 20px;
+  color: #26E3FF;
   text-decoration: none;
-  color: black;
 }
 
 p {
@@ -75,7 +76,7 @@ header {
 
 #menu {
   display: none;
-  line-height: initial;
+  line-height: 0px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -102,9 +103,13 @@ header {
 #burger-con {
   display: none;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
   z-index: 2;
+  text-align: right;
+  background-color: #2D2D2D;
+}
+
+#burger-con ul li {
+  margin-top: 10px;
 }
 
 #burger-con.slide-toggle {
