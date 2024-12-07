@@ -14,6 +14,7 @@
 
 h2 {
   font-size: 24px;
+  color: #2D2D2D;
 }
 
 a {
@@ -60,7 +61,7 @@ button {
 
 header {
   line-height: 80px;
-  background-color: red;
+  background-color: #26E3FF;
 }
 
 #menu {
@@ -118,6 +119,10 @@ footer {
   background-color: red;
 }
 
+html {
+  background-color: #2D2D2D;
+}
+
 #welcome_stack {
   align-items: center;
   justify-items: center;
@@ -137,6 +142,7 @@ footer {
 #short_description {
   text-align: center;
   line-height: 30px;
+  color: #26E3FF;
 }
 
 #up_icon {
@@ -146,7 +152,9 @@ footer {
 
 .line_h2 {
   height: 30px;
-  background-color: red;
+  background-color: #26E3FF;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .line_r {
@@ -159,12 +167,16 @@ footer {
 }
 
 .fill_l {
-  background-color: red;
+  background-color: #26E3FF;
   height: 100%;
   width: 37px;
   grid-row: 2;
   position: relative;
   right: 37px;
+}
+
+.player_section {
+  margin-bottom: 20px;
 }
 
 .player_l {
@@ -174,12 +186,13 @@ footer {
 
 #video_1 {
   background-color: #767676;
+  margin-bottom: 20px;
 }
 
 .img {
-  height: 92px;
   background-color: #767676;
   color: #767676;
+  background-size: cover;
   margin-bottom: 20px;
 }
 

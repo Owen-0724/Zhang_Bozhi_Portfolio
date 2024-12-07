@@ -1,4 +1,6 @@
-
+html{
+    background-color: #2D2D2D;
+}
 
 
 
@@ -26,6 +28,7 @@
 #short_description{
     text-align: center;
     line-height: 30px;
+    color: #26E3FF;
 }
 
 #up_icon{
@@ -35,7 +38,9 @@
 
 .line_h2{
     height: 30px;
-    background-color: red;
+    background-color: #26E3FF;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 .line_r{
@@ -49,7 +54,7 @@
 }
 
 .fill_l{
-    background-color: red;
+    background-color: #26E3FF;
     height: 100%;
     width: 37px;
     grid-row: 2;
@@ -57,21 +62,27 @@
     right: 37px;
 }
 
+.player_section{
+    margin-bottom: 20px;
+}
+
 .player_l{
     grid-row: 2;
     z-index: 2;
+    
 }
 
 #video_1{
     
     background-color: #767676;
+    margin-bottom: 20px;
 
 }
 
 .img{
-    height: 92px;
     background-color: #767676;
     color: #767676;
+    background-size: cover;
 
     margin-bottom: 20px;
 }

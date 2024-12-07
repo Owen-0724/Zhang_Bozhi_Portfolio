@@ -6,14 +6,16 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 	<link href="css/grid.css" rel="stylesheet" type="text/css">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
+
+	<script src="https://cdn.plyr.io/3.7.8/plyr.js" async></script>
+	<script src="js/main.js" defer></script>
 	<title>Portfolio</title>
 </head>
 <body>
 	<header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
-		<a href="index.html"  id="header_logo"
-		class="l-col-start-1 l-col-end-2"
-		><img src="/images/logo.svg" height="14px">
+		<a href="index.html"  id="header_logo" class="l-col-start-1 l-col-end-2">
+		<img src="/images/logo.svg" height="14px">
 		</a>
 		<nav id="menu" class="l-col-start-8 l-col-end-13">
 			<ul>
@@ -64,26 +66,24 @@ motion designer.
 		<div class="spacing_160 col-span-full"></div>
 	</section>
 
-	<div class="spacing_60 col-span-full"></div>
-
+	
 	<h2 class="line_h2 line_r">PROJECTS</h2>
 
-	<section class="grid-con" >
+	<section class="grid-con player_section" >
 		<h2 class="hidden">PROJECTS</h2>
 
-		<div class="spacing_60 col-span-full"></div>
 
 		<div class="col-start-1 fill_l"></div>
 
 		<div class="player_l col-start-1 col-end-5 l-col-start-1 l-col-end-7">
 			<video class="player" id="video_1" poster="images/placeholder.jpg">
-				<source src="video/video.mp4" type="video/mp4">
-				<source src="video/video.webm" type="video/webm">
+				<source src="video/demo_reel.mp4" type="video/mp4">
+				<source src="video/demo_reel.mp4" type="video/webm">
 				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
 			</video>
 		</div>
-		
-		<div class="spacing_60 col-span-full"></div>
+
+<!--
 
 		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">PROJECT NAME</p>
 		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">Project #1</p>
@@ -112,45 +112,39 @@ motion designer.
 		<p class="col-start-1 col-end-5">Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis consectetur aliquam posuere laoreet maximus. Mauris curae erat mauris non facilisi nascetur. Vulputate malesuada sapien non aptent, venenatis vulputate lacinia. Sodales per faucibus luctus ut, turpis habitasse ornare nisi.</p>
 		<p class="col-start-4 col-end-5">YEAR</p>
 		<p class="col-start-4 col-end-5">2024</p>
-
+-->
 	</section>
-
-	<div class="spacing_60 col-span-full"></div>
 
 	<section  class="grid-con">
 		<h2 class="hidden">images</h2>
-		<div class="col-start-1 col-span-2 img"></div>
-		<div class="col-start-3 col-span-2 img"></div>
+		
+			<img src="images/img1.png " class="col-span-full img">
+			<img src="images/img1.png " class="col-span-full img">
+			<img src="images/img1.png " class="col-span-full img">
 
-		<div class="col-start-1 col-span-4 img"></div>
 
-		<div class="col-start-1 col-span-2 img"></div>
-		<div class="col-start-3 col-span-2 img"></div>
+		<P class="col-start-2 col-span-2 more_info">more info</P>
+
 	</section>
 
-	<div class="spacing_60 col-span-full"></div>
 
 	<h2 class="line_h2 line_l">CONTACT</h2>
 
 	<section class="grid-con">
 		<h2 class="hidden">CONTACT</h2>
 
-		<div class="spacing_60 col-span-full"></div>
 
 		<img src="images/chat.svg" height="52px" class="col-span-full" id="chat_icon">
 
-		<div class="spacing_60 col-span-full"></div>
+
 
 		<p class="col-start-2 col-span-2 l-col-start-5 l-col-span-4 " id="contct_now">CONTACT NOW</p>
 	</section>
-
-	<div class="spacing_60 col-span-full"></div>
 
 	<footer class="grid-con">
 		<img src="/images/logo.svg" height="14px" class="logo col-start-1 col-span-2" id="footer_logo">
 		<div class="col-start-3 col-span-2 l-col-start-10 l-col-span-3" id="footer_3"></div>
 	</footer>
-	<script src="https://cdn.plyr.io/3.7.8/plyr.js" async></script>
-	<script src="js/main.js" defer></script>
+
 </body>
 </html>
