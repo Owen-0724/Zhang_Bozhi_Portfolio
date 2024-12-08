@@ -1,0 +1,71 @@
+.case_header{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.case_text{
+    height: 30px;
+    background-color: #26E3FF;
+}
+
+#case_1{
+    margin-bottom: 20px;
+}
+
+.player_case{
+    margin-bottom: 20px;
+}
+
+.case_img{
+    width: 100%;
+    object-fit: cover;
+
+    margin-bottom: 20px; 
+}
+
+/*---- tablet ----*/
+
+@media screen and (min-width: 768px) {
+    .case_text{
+        height: 40px;
+    }
+
+    .case_header{
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    .case_img{
+        margin-bottom: 0px; 
+    }
+
+    #case_1, .player_case{
+        margin-bottom: 40px;
+    }
+
+    .case_2 img{
+        grid-row: 2;
+    }
+    
+    .text_solution{
+        grid-row: 1;
+    }
+}
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) {
+    .case_text{
+        height: 60px;
+    }
+
+    #case_1, .player_case{
+        margin-bottom: 120px;
+    }
+
+    .case_header{
+        margin-top: 200px;
+        margin-bottom: 120px;
+    }
+
+}

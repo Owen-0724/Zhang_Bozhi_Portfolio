@@ -11,15 +11,68 @@ h2{
 
 a{
     font-size: 20px;
-    color: #26E3FF;
+    color: #2D2D2D;
     text-decoration: none;
 }
 
-p{
+p, pre{
     font-size: 14px;
     color: white;
 }
 
 #about_text{
     margin-bottom: 20px;
+}
+
+h3, .case_p{
+    font-size: 12px;
+}
+
+h3{
+    color: #767676; 
+}
+
+.text_r{
+    text-align: right;
+}
+
+/*---- tablet ----*/
+
+@media screen and (min-width: 768px) {
+    h2{
+        font-size: 30px;
+    }
+
+    #about_text{
+        margin-bottom: 40px;
+    }
+
+    p, pre{
+        font-size: 20px;
+    }
+    
+    a, h3, .case_p{
+        font-size: 16px;
+    }
+
+}
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) {
+    h2{
+        font-size: 48px;
+    }
+
+    #about_text{
+        margin-bottom: 120px;
+    }
+
+    p, pre{
+        font-size: 40px;
+    }
+    
+    a, h3, .case_p{
+        font-size: 24px;
+    }
 }

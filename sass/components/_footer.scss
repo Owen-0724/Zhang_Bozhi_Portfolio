@@ -1,23 +1,18 @@
-#footer_logo{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-footer{
+.footer{
     height: 80px;
     background-color: #26E3FF;
-    margin-top: 60px;
-    
+    margin-top: 60px; 
 }
 
 .footer_logo{
+    align-self: center;
     display: none;
 }
 
 .social_media_group{
-    align-content: center;
-    justify-self: center;
-    justify-content: space-between;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
 }
 
 .social_media_group img{
@@ -25,4 +20,29 @@ footer{
     height: 36px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*---- tablet ----*/
+
+@media screen and (min-width: 768px) {
+    .footer_logo{
+        display: block;
+    }
+}
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) {
+    .footer{
+        height: 160px;
+        margin-top: 200px; 
+    }
+
+    .footer_logo{
+        height: 40px;
+    }
+
+    .social_media_group img{
+        height: 40px;
+    }
 }
