@@ -21,6 +21,10 @@ header{
     background-color: #26E3FF;
 }
 
+#header_logo{
+    align-self: center;
+}
+
 #menu{
     display: none;
     line-height: 0px;
@@ -34,8 +38,8 @@ header{
     padding: 0;
     margin: 0;
     justify-content: space-between;
-}
 
+}
 
 #menu ul li{
     display: inline;
@@ -65,4 +69,24 @@ header{
 
 #burger-con.slide-toggle {
     display: block;
+}
+
+/*---- tablet ----*/
+
+@media screen and (min-width: 768px) {
+    header{
+        line-height: 60px;
+    }
+}
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) {
+    header{
+        height: 80px;
+    }
+
+    #header_logo img{
+        height: 20px;
+    }
 }

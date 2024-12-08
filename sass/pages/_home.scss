@@ -2,8 +2,6 @@ html{
     background-color: #2D2D2D;
 }
 
-
-
 #welcome_stack{
     
     align-items: center;
@@ -35,10 +33,6 @@ html{
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
-
 
 .player_section{
     margin-bottom: 20px;
@@ -75,32 +69,43 @@ html{
     margin-right: auto;
 }
 
+/*---- tablet ----*/
 
-
-
-
-/*---- desktop ----*/
-
-@media screen and (min-width: 1200px) { 
-    header{
-        line-height: 150px;
-    }
-
+@media screen and (min-width: 768px) {
     #menu{
         display: block;
-    }
-
-    .home_welcome{
-        font-size: 160px;
-        margin-bottom: -60px;
     }
 
     #burger,#up_icon{
         display: none;
     }
 
-    .plyer{
-        height: 200px;
+    .player_section{
+        margin-bottom: 40px;
+    }
+
+    .img{
+        margin-bottom: 40px;
+    }
+
+}
+
+
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) { 
+    
+    .home_welcome{
+        font-size: 160px;
+        margin-bottom: -60px;
+    }
+
+    .player_section{
+        margin-bottom: 120px;
     }
     
+    .img{
+        margin-bottom: 120px;
+    }
 }
