@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+	<link href="css/grid.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+
+	<script src="https://cdn.plyr.io/3.7.8/plyr.js" async></script>
+	<script src="js/main.js" defer></script>
+	<title>CONTACT</title>
+</head>
+<body>
+	<header class="grid-con">
+		<h1 class="hidden">Portfolio</h1>
+		<a href="index.html"  id="header_logo" class="l-col-start-1 l-col-end-2">
+		<img src="/images/logo.svg" height="14px">
+		</a>
+		<div id="menu" class="l-col-start-8 l-col-end-13">
+			<ul>
+				<li><a href="projects.html">PROJECTS</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		
+		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px"
+		>
+		<button id="burger" class="col-start-4 col-end-5"></button>
+		
+	</header>
+	<div id="burger-con" class="grid-con col-span-full">
+				<ul>
+					<li><a href="projects.html">PROJECTS</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+	</div>
+	
+	<h2 class="line_h2 line_l">CONTACT</h2>
+
+	<section id="contact" class="grid-con">
+		<h2 class="hidden">mid</h2>
+		<div id="contact_form" class="col-span-full m-col-start-2 m-col-end-12">
+			<form action="email.php" method="POST" enctype="text/plain">
+				<input name="contactInfo" type="text" placeholder="Email">
+				<input name="fullName" type="text" required placeholder="First & Last Name">
+				<input name="Topic" type="text" required placeholder="Topic">
+				<textarea name="msg" placeholder="Comments here"></textarea>
+				<input name="submit" type="submit" value="SUBMIT">
+			</form>
+		</div>
+	</section>
+
+
+	<footer class="full-width-grid-con	">
+		<img src="/images/logo.svg" height="14px" class="logo col-start-1 col-span-2 footer_logo">
+		<div class="col-start-2 col-span-2 social_media_group">
+			<img src="images/facebook.svg">
+			<img src="images/x.svg">
+			<img src="images/ins.svg">
+		</div>
+	</footer>
+
+</body>
+</html>

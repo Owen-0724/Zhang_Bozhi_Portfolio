@@ -15,11 +15,23 @@ a{
     text-decoration: none;
 }
 
-p{
+p, pre{
     font-size: 14px;
     color: white;
 }
 
 #about_text{
     margin-bottom: 20px;
+}
+
+h3, .case_p{
+    font-size: 12px;
+}
+
+h3{
+    color: #767676; 
+}
+
+.text_r{
+    text-align: right;
 }
