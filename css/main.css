@@ -55,7 +55,7 @@ h3 {
   p, pre {
     font-size: 20px;
   }
-  a {
+  a, h3, .case_p {
     font-size: 16px;
   }
 }
@@ -70,7 +70,7 @@ h3 {
   p, pre {
     font-size: 40px;
   }
-  a {
+  a, h3, .case_p {
     font-size: 24px;
   }
 }
@@ -383,7 +383,11 @@ html {
   background-color: #26E3FF;
   padding: 10px;
   border: 0px;
-  margin-top: 60px;
+  margin-top: 40px;
+}
+
+#contact_form form textarea {
+  height: 100px;
 }
 
 #contact_form form {
@@ -402,11 +406,58 @@ input::placeholder, textarea::placeholder {
 }
 
 #contact_form input[type=submit] {
-  width: 120px;
   text-align: center;
   align-self: center;
 }
 
+/*---- tablet ----*/
+@media screen and (min-width: 768px) {
+  #contact_form form input, #contact_form form textarea {
+    padding: 20px;
+    margin-top: 60px;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    font-size: 24px;
+  }
+  input::placeholder, textarea::placeholder {
+    font-size: 24px;
+  }
+  input[type=text] {
+    height: 60px;
+  }
+  #contact_form form textarea {
+    height: 200px;
+  }
+  #contact_form input[type=submit] {
+    font-size: 40px;
+    padding: 0 30px;
+  }
+}
+/*---- desktop ----*/
+@media screen and (min-width: 1200px) {
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    font-size: 30px;
+  }
+  input::placeholder, textarea::placeholder {
+    font-size: 30px;
+  }
+  #contact_form form input, #contact_form form textarea {
+    padding: 20px;
+    margin-top: 120px;
+  }
+  input[type=text] {
+    height: 80px;
+    justify-self: center;
+  }
+  #contact_form form textarea {
+    height: 300px;
+  }
+  #contact_form input[type=submit] {
+    display: flex;
+    text-align: center;
+    align-self: flex-end;
+  }
+}
 .case_header {
   margin-top: 60px;
   margin-bottom: 20px;
@@ -417,15 +468,71 @@ input::placeholder, textarea::placeholder {
   background-color: #26E3FF;
 }
 
-.text_problem {
-  grid-row: 2;
-  z-index: 2;
-}
-
 #case_1 {
   margin-bottom: 20px;
 }
 
 .player_case {
   margin-bottom: 20px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.case_img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/*---- tablet ----*/
+@media screen and (min-width: 768px) {
+  .case_text {
+    height: 40px;
+  }
+  .case_header {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .case_img {
+    margin-bottom: 0px;
+  }
+  #case_1, .player_case {
+    margin-bottom: 40px;
+  }
+  .case_2 img {
+    grid-row: 2;
+  }
+  .text_solution {
+    grid-row: 1;
+  }
+}
+/*---- desktop ----*/
+@media screen and (min-width: 1200px) {
+  .case_text {
+    height: 60px;
+  }
+  #case_1, .player_case {
+    margin-bottom: 120px;
+  }
+  .case_header {
+    margin-top: 200px;
+    margin-bottom: 120px;
+  }
+}
+.text_softwares {
+  text-align: right;
+}
+
+.text_services {
+  text-align: left;
+}
+
+/*---- tablet ----*/
+@media screen and (min-width: 768px) {
+  .text_softwares {
+    text-align: left;
+  }
+  .text_services {
+    text-align: right;
+  }
+}
+/*---- desktop ----*//*# sourceMappingURL=main.css.map */

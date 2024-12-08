@@ -1,0 +1,23 @@
+.text_softwares{
+    text-align: right;
+}
+
+.text_services{
+    text-align: left;
+}
+/*---- tablet ----*/
+
+@media screen and (min-width: 768px) {
+    .text_softwares{
+        text-align: left;
+    }
+    .text_services{
+        text-align: right;
+    }
+}
+
+/*---- desktop ----*/
+
+@media screen and (min-width: 1200px) {
+
+}
