@@ -6,9 +6,6 @@ $query = 'SELECT * FROM projects,files WHERE file_id = files.id AND projects.id 
 $results = mysqli_query($connect,$query);
 $row = mysqli_fetch_assoc($results);
 
-$img = explode(',', $row('files'));
-
-echo $img['img'];
 ?>
 
 <head>
@@ -23,30 +20,27 @@ echo $img['img'];
 	<title>CASE STUDY</title>
 </head>
 <body>
-	<header class="grid-con">
+<header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
-		<a href="index.html"  id="header_logo" class="l-col-start-1 l-col-end-2">
-		<img src="/images/logo.svg" height="14px">
+		<a href="index.php"  id="header_logo" class="l-col-start-1 l-col-end-2">
+		<img src="/images/logo.svg">
 		</a>
-		<div id="menu" class="l-col-start-8 l-col-end-13">
+		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
 			<ul>
-				<li><a href="projects.html">PROJECTS</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
+				<li><a href="projects.php">PROJECTS</a></li>
+				<li><a href="about.php">ABOUT</a></li>
+				<li><a href="contact.php">CONTACT</a></li>
 			</ul>
 		</div>
-		
-		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px"
-		>
-		<button id="burger" class="col-start-4 col-end-5"></button>
-		
+		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
+		<button id="burger" class="col-start-4 col-end-5"></button>	
 	</header>
 	<div id="burger-con" class="grid-con col-span-full">
-				<ul>
-					<li><a href="projects.html">PROJECTS</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
+		<ul>
+			<li><a href="projects.php">PROJECTS</a></li>
+			<li><a href="about.php">ABOUT</a></li>
+			<li><a href="contact.php">CONTACT</a></li>
+		</ul>
 	</div>
 	<div class="grid-con case_header">
 		<h2 class="col-start-1 col-span-3 m-col-start-1 m-col-span-7 case_text">
@@ -105,9 +99,9 @@ echo $img['img'];
 	</section>
 
 
-	<footer class="full-width-grid-con	">
-		<img src="/images/logo.svg" height="14px" class="logo col-start-1 col-span-2 footer_logo">
-		<div class="col-start-2 col-span-2 social_media_group">
+	<footer class="grid-con footer">
+		<img src="/images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
+		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
 			<img src="images/facebook.svg">
 			<img src="images/x.svg">
 			<img src="images/ins.svg">

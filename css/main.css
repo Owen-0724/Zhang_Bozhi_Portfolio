@@ -44,6 +44,10 @@ h3 {
   text-align: right;
 }
 
+#burger-con ul li a {
+  color: #26E3FF;
+}
+
 /*---- tablet ----*/
 @media screen and (min-width: 768px) {
   h2 {

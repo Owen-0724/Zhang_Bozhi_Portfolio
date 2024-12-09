@@ -19,28 +19,25 @@ $results = mysqli_query($connect,$query);
 <body>
 	<header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
-		<a href="index.html"  id="header_logo" class="l-col-start-1 l-col-end-2">
-		<img src="/images/logo.svg" height="14px">
+		<a href="index.php"  id="header_logo" class="l-col-start-1 l-col-end-2">
+		<img src="/images/logo.svg">
 		</a>
-		<div id="menu" class="l-col-start-8 l-col-end-13">
+		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
 			<ul>
-				<li><a href="projects.html">PROJECTS</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
+				<li><a href="projects.php">PROJECTS</a></li>
+				<li><a href="about.php">ABOUT</a></li>
+				<li><a href="contact.php">CONTACT</a></li>
 			</ul>
 		</div>
-		
-		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px"
-		>
-		<button id="burger" class="col-start-4 col-end-5"></button>
-		
+		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
+		<button id="burger" class="col-start-4 col-end-5"></button>	
 	</header>
 	<div id="burger-con" class="grid-con col-span-full">
-				<ul>
-					<li><a href="projects.html">PROJECTS</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
+		<ul>
+			<li><a href="projects.php">PROJECTS</a></li>
+			<li><a href="about.php">ABOUT</a></li>
+			<li><a href="contact.php">CONTACT</a></li>
+		</ul>
 	</div>
 	
 	<h2 class="line_h2 line_r">PROJECTS</h2>
@@ -79,9 +76,9 @@ $results = mysqli_query($connect,$query);
 	}
 	?>
 	</section>
-	<footer class="full-width-grid-con	">
-		<img src="/images/logo.svg" height="14px" class="logo col-start-1 col-span-2 footer_logo">
-		<div class="col-start-2 col-span-2 social_media_group">
+	<footer class="grid-con footer">
+		<img src="/images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
+		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
 			<img src="images/facebook.svg">
 			<img src="images/x.svg">
 			<img src="images/ins.svg">
