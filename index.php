@@ -14,7 +14,7 @@ $results = mysqli_query($connect,$query);
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 
 	<script src="https://cdn.plyr.io/3.7.8/plyr.js" async></script>
-	<script src="js/main.js" defer></script>
+	
 	<title>Portfolio</title>
 </head>
 <body>
@@ -25,31 +25,26 @@ $results = mysqli_query($connect,$query);
 		</a>
 		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
 			<ul>
-				<li><a href="projects.html">PROJECTS</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
+				<li><a href="projects.php">PROJECTS</a></li>
+				<li><a href="about.php">ABOUT</a></li>
+				<li><a href="contact.php">CONTACT</a></li>
 			</ul>
 		</div>
-		
-		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px"
-		>
-		<button id="burger" class="col-start-4 col-end-5"></button>
-		
-
-		
+		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
+		<button id="burger" class="col-start-4 col-end-5"></button>	
 	</header>
 	<div id="burger-con" class="grid-con col-span-full">
-				<ul>
-					<li><a href="projects.html">PROJECTS</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
+		<ul>
+			<li><a href="projects.php">PROJECTS</a></li>
+			<li><a href="about.php">ABOUT</a></li>
+			<li><a href="contact.php">CONTACT</a></li>
+		</ul>
 	</div>
 
 	<section id="home-top" class="grid-con">
 		<h2 class="hidden">top</h2>
-		<div class="spacing_160 col-span-full"></div>
-		<div class="col-start-1 col-end-5 l-col-start-1 l-col-end-13" id="welcome_stack">
+		<div class="spacing_160 col-span-full  m-col-start-3 m-col-end-11"></div>
+		<div class="col-start-1 col-end-5 l-col-start-1 l-col-end-13  m-col-start-3 m-col-end-11" id="welcome_stack">
 			<p class="home_welcome" id="home_welcome_1">
 				WELCOME
 			</p>
@@ -62,7 +57,7 @@ $results = mysqli_query($connect,$query);
 		</div>
 		<div class="spacing_80 col-span-full moblie_spacing"></div>
 
-		<pre class="col-start-1 col-end-5 l-col-start-1 l-col-end-13" id="short_description">
+		<pre class="col-start-1 col-end-5 l-col-start-1 l-col-end-13 m-col-start-3 m-col-end-11" id="short_description">
 I am Owen, 
 a graphic designer & 
 motion designer.
@@ -87,37 +82,6 @@ motion designer.
 				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
 			</video>
 		</div>
-
-<!--
-
-		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">PROJECT NAME</p>
-		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">Project #1</p>
-		<div class="spacing_20 col-span-full"></div>
-		<p class="col-start-1 col-end-4 l-col-start-8 l-col-end-13">DESCRIPTION</p>
-		<p class="col-start-1 col-end-5 l-col-start-8 l-col-end-13">Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis consectetur aliquam posuere laoreet maximus. Mauris curae erat mauris non facilisi nascetur. Vulputate malesuada sapien non aptent, venenatis vulputate lacinia. Sodales per faucibus luctus ut, turpis habitasse ornare nisi.</p>
-		<p class="col-start-4 col-end-5 l-col-start-8 l-col-end-13">YEAR</p>
-		<p class="col-start-4 col-end-5 l-col-start-8 l-col-end-13">2024</p>
-
-		<div class="spacing_60 col-span-full"></div>
-
-		<div class="col-start-1 col-end-4">
-			<video class="player" id="video_2s" poster="images/placeholder.jpg">
-				<source src="video/video.mp4" type="video/mp4">
-				<source src="video/video.webm" type="video/webm">
-				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
-			</video>
-		</div>
-
-		<div class="spacing_60 col-span-full"></div>
-
-		<p class="col-start-1 col-end-4">PROJECT NAME</p>
-		<p class="col-start-1 col-end-4">Project #2</p>
-		<div class="spacing_20 col-span-full"></div>
-		<p class="col-start-1 col-end-4">DESCRIPTION</p>
-		<p class="col-start-1 col-end-5">Lorem ipsum odor amet, consectetuer adipiscing elit. Turpis consectetur aliquam posuere laoreet maximus. Mauris curae erat mauris non facilisi nascetur. Vulputate malesuada sapien non aptent, venenatis vulputate lacinia. Sodales per faucibus luctus ut, turpis habitasse ornare nisi.</p>
-		<p class="col-start-4 col-end-5">YEAR</p>
-		<p class="col-start-4 col-end-5">2024</p>
--->
 	</section>
 
 <section class="grid-con">
@@ -173,6 +137,10 @@ while ($row = mysqli_fetch_assoc($results)) {
 			<img src="images/ins.svg">
 		</div>
 	</footer>
-
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+	<script src="js/main.js" defer></script>
 </body>
 </html>
