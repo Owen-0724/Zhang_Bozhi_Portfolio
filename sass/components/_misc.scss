@@ -40,13 +40,15 @@
     margin-bottom: 20px;
 }
 
-.line_r{
+.line_r, .line_l{
+    position: relative;
+    overflow: hidden;
     margin-left: 30%;
 }
 
 .line_l{
+    margin-left: 0%;
     margin-right: 30%;
-
     text-align: right;
 }
 

@@ -25,6 +25,12 @@ header{
     align-self: center;
 }
 
+header, #burger-con{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 #menu{
     display: none;
     line-height: 0px;

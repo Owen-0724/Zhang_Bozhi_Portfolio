@@ -18,24 +18,60 @@ const player = new Plyr('video');
     
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to('.box', {
-        scrollTrigger: '.box', // start animation when ".box" enters the viewport
-        x: 500
-    });
 
-    gsap.to(".line_r", 1,
+    gsap.utils.toArray(".line_r").forEach((line) => {
+        gsap.from(line, {
+            scrollTrigger: {
+                trigger: line,
+                toggleActions: "restart resume reverse resume",
+                start: "top bottom",
+                end: "bottom center",
+                scrub: true,
+            },
+            marginLeft: "100%",
+            ease: "power1.inOut",
+        });
+    });
+      
+    gsap.from(".line_l",
         {scrollTrigger:{
-            trigger: ".line_r",
+            trigger: ".line_l",
   
             toggleActions: "restart resume reverse resume",
-            markers: true,
-  
             start: "top center",
-  
-            end: "bottom center"
+            end: "bottom 100px",
+            scrub: true,
         },
-        x:100, ease:"power1.inOut"
+        marginRight: "100%",
+        ease:"power1.Out"
         }
-    ) ;  
+    ) ;
+
+    gsap.from(".player_l",
+        {scrollTrigger:{
+            trigger: ".player_l",
+  
+            toggleActions: "restart resume reverse resume",
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: true,
+        },left: "100%",
+        ease:"power1.Out"
+        }
+    ) ;
+
+    gsap.from(".img_x3",
+        {scrollTrigger:{
+            trigger: ".img_x3",
+  
+            toggleActions: "restart resume reverse resume",
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: true,
+        },
+        left: "100%",
+        ease:"power1.Out"
+        }
+    ) ;
 
 })();
