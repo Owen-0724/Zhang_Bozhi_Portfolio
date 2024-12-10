@@ -12,10 +12,10 @@
 	<title>Portfolio</title>
 </head>
 <body>
-	<header class="grid-con">
+<header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
 		<a href="index.php"  id="header_logo" class="l-col-start-1 l-col-end-2">
-		<img src="/images/logo.svg">
+		<img src="images/logo.svg">
 		</a>
 		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
 			<ul>
@@ -24,7 +24,7 @@
 				<li><a href="contact.php">CONTACT</a></li>
 			</ul>
 		</div>
-		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
+		<img src="images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
 		<button id="burger" class="col-start-4 col-end-5"></button>	
 	</header>
 	<div id="burger-con" class="grid-con col-span-full">
@@ -56,13 +56,15 @@ Website designer
 Website Developer</pre>
 	</div>
 	<footer class="grid-con footer">
-		<img src="/images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
+		<img src="images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
 		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
 			<img src="images/facebook.svg">
 			<img src="images/x.svg">
 			<img src="images/ins.svg">
 		</div>
 	</footer>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </body>
 </html>

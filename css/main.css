@@ -104,6 +104,12 @@ header {
   align-self: center;
 }
 
+header, #burger-con {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 #menu {
   display: none;
   line-height: 0px;
@@ -243,11 +249,14 @@ header {
   margin-bottom: 20px;
 }
 
-.line_r {
+.line_r, .line_l {
+  position: relative;
+  overflow: hidden;
   margin-left: 30%;
 }
 
 .line_l {
+  margin-left: 0%;
   margin-right: 30%;
   text-align: right;
 }
@@ -324,10 +333,14 @@ html {
 }
 
 .player_section {
+  overflow: hidden;
   margin-bottom: 20px;
 }
 
 .player_l {
+  position: relative;
+  overflow: hidden;
+  left: 0;
   grid-row: 2;
   z-index: 2;
 }
@@ -342,6 +355,14 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 20px;
+}
+
+.img_x3 {
+  position: relative;
+}
+
+.img_group {
+  overflow: hidden;
 }
 
 #home_contact {

@@ -5,7 +5,7 @@ require_once('includes/connect.php');
 $query = 'SELECT * FROM projects,files WHERE file_id = files.id AND projects.id ='.$_GET['id'];
 $results = mysqli_query($connect,$query);
 $row = mysqli_fetch_assoc($results);
-
+$data = explode(',', $row['img']);
 ?>
 
 <head>
@@ -15,7 +15,7 @@ $row = mysqli_fetch_assoc($results);
 	<link href="css/grid.css" rel="stylesheet" type="text/css">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 
-	<script src="https://cdn.plyr.io/3.7.8/plyr.js" async></script>
+	<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 	<script src="js/main.js" defer></script>
 	<title>CASE STUDY</title>
 </head>
@@ -23,7 +23,7 @@ $row = mysqli_fetch_assoc($results);
 <header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
 		<a href="index.php"  id="header_logo" class="l-col-start-1 l-col-end-2">
-		<img src="/images/logo.svg">
+		<img src="images/logo.svg">
 		</a>
 		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
 			<ul>
@@ -32,7 +32,7 @@ $row = mysqli_fetch_assoc($results);
 				<li><a href="contact.php">CONTACT</a></li>
 			</ul>
 		</div>
-		<img src="/images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
+		<img src="images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
 		<button id="burger" class="col-start-4 col-end-5"></button>	
 	</header>
 	<div id="burger-con" class="grid-con col-span-full">
@@ -72,7 +72,7 @@ $row = mysqli_fetch_assoc($results);
 	<section class="grid-con" id="case_2">
 		<h2 class="hidden">CASE STUDY</h2>
 
-		<img src="images/img1.png " class="col-span-full m-col-start-7 m-col-span-6 case_img">
+		<img src="images/<?php echo$data[2];?>" class="col-span-full m-col-start-7 m-col-span-6 case_img">
 
 		<div class="col-start-1 fill_l"></div>
 		<div class="col-span-full m-col-start-1 m-col-span-5 text_solution">
@@ -86,27 +86,29 @@ $row = mysqli_fetch_assoc($results);
 	<section class="grid-con">
 		<h2 class="hidden">images</h2>
 		<div class="player_case col-span-full">
-			<video class="player" id="video_1" poster="images/placeholder.jpg">
-				<source src="video/demo_reel.mp4" type="video/mp4">
-				<source src="video/demo_reel.mp4" type="video/webm">
+			<video class="player" id="video_1" poster="images/<?php echo$data[1];?>">
+				<source src="video/<?php echo$row['video'];?>" type="video/mp4">
 				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
 			</video>
 		</div>
-			<img src="images/img1.png " class="col-span-full img">
-			<img src="images/img1.png " class="col-span-full img">
-			<img src="images/img1.png " class="col-span-full img">
+			<img src="images/<?php echo$data[3];?>" class="col-span-full img">
+			<img src="images/<?php echo$data[4];?>" class="col-span-full img">
+	
 
 	</section>
 
 
 	<footer class="grid-con footer">
-		<img src="/images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
+		<img src="images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
 		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
 			<img src="images/facebook.svg">
 			<img src="images/x.svg">
 			<img src="images/ins.svg">
 		</div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
 </body>
 </html>

@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><defs><style>.f7ef51c8-5fea-4b4d-ae46-2c38786eed6b{fill:#fff;}</style></defs><title>资源 10</title><g id="a7c18a76-e132-45f3-a64c-ba88a783548d" data-name="图层 2"><g id="e7921218-0fa2-4ff5-ac42-986bcf043e93" data-name="图层 1"><path id="f9639e0b-fc90-4ab6-90df-994208b6ce44" data-name="Path 13" class="f7ef51c8-5fea-4b4d-ae46-2c38786eed6b" d="M12.4,0A12.5,12.5,0,0,0,0,12.4V29.6A12.5,12.5,0,0,0,12.4,42H29.6A12.5,12.5,0,0,0,42,29.6V12.4A12.5,12.5,0,0,0,29.6,0ZM32.5,7.6a2,2,0,0,1,1.9,1.9,2,2,0,1,1-1.9-1.9ZM21,10.5A10.5,10.5,0,1,1,10.5,21,10.5,10.5,0,0,1,21,10.5Zm0,1.9A8.6,8.6,0,1,0,29.6,21h0A8.7,8.7,0,0,0,21,12.4Z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2D2D2D;}
+</style>
+<title>资源 10</title>
+<g id="a7c18a76-e132-45f3-a64c-ba88a783548d">
+	<g id="e7921218-0fa2-4ff5-ac42-986bcf043e93">
+		<path id="f9639e0b-fc90-4ab6-90df-994208b6ce44" class="st0" d="M12.4,0C5.6,0.1,0.1,5.6,0,12.4v17.2C0.1,36.4,5.6,41.9,12.4,42
+			h17.2c6.8-0.1,12.3-5.6,12.4-12.4V12.4C41.9,5.6,36.4,0.1,29.6,0H12.4z M32.5,7.6c1,0.1,1.8,0.9,1.9,1.9c0.1,1.1-0.8,2-1.9,2.1
+			c-1.1,0.1-2-0.8-2.1-1.9c-0.1-1.1,0.8-2,1.9-2.1C32.4,7.6,32.4,7.6,32.5,7.6z M21,10.5c5.8,0,10.5,4.7,10.5,10.5
+			S26.8,31.5,21,31.5S10.5,26.8,10.5,21S15.2,10.5,21,10.5z M21,12.4c-4.7,0-8.6,3.9-8.6,8.6s3.9,8.6,8.6,8.6s8.6-3.9,8.6-8.6l0,0
+			l0,0C29.5,16.3,25.7,12.5,21,12.4z"/>
+	</g>
+</g>
+</svg>

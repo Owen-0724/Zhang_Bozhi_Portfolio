@@ -35,10 +35,15 @@ html{
 }
 
 .player_section{
+    overflow: hidden;
     margin-bottom: 20px;
+    
 }
 
 .player_l{
+    position: relative;
+    overflow: hidden;
+    left: 0;
     grid-row: 2;
     z-index: 2;
     
@@ -56,6 +61,14 @@ html{
     object-fit: cover;
 
     margin-bottom: 20px;
+}
+
+.img_x3{
+    position: relative;
+}
+
+.img_group{
+    overflow: hidden;
 }
 
 #home_contact{
