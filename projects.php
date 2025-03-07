@@ -2,8 +2,8 @@
 <html>
 <?php
 require_once('includes/connect.php');
-$query = 'SELECT projects.id AS project,project_name, img, cover_img FROM projects,files WHERE file_id = files.id';
-$results = mysqli_query($connect,$query);
+$stmt = $connection->prepare('SELECT projects.id AS project,project_name, img, cover_img FROM projects,files WHERE file_id = files.id');
+$stmt->execute();
 ?>
 <head>
 	<meta charset="utf-8">
@@ -61,7 +61,7 @@ $results = mysqli_query($connect,$query);
 		<h2 class="hidden">images</h2>
 	<?php
 	$cell = 0;
-	while ($row = mysqli_fetch_assoc($results)) {
+	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		if ($cell == 2) {
 			$cell = 1;
 		} else {

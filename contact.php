@@ -40,12 +40,13 @@
 	<section id="contact" class="grid-con">
 		<h2 class="hidden">mid</h2>
 		<div id="contact_form" class="col-span-full m-col-start-2 m-col-end-12 l-col-start-4 l-col-end-10">
-			<form action="email.php" method="POST" enctype="text/plain">
-				<input name="contactInfo" type="text" placeholder="Email">
-				<input name="fullName" type="text" required placeholder="First & Last Name">
-				<input name="Topic" type="text" required placeholder="Topic">
-				<textarea name="msg" placeholder="Comments here"></textarea>
-				<input name="submit" type="submit" value="SUBMIT">
+			<form id="form">
+				<input type="email" placeholder="Email" id="email">
+				<input type="text" required placeholder="First & Last Name" id="name">
+				<input type="text" required placeholder="Topic" id="topic">
+				<textarea type="text" placeholder="Comments here" id="comments"></textarea>
+				<input type="submit" value="SUBMIT">
+				<section id="feedback"><p>*Please fill out all required sections</p></section>
 			</form>
 		</div>
 	</section>
