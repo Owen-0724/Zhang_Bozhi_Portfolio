@@ -2,8 +2,8 @@
 <html>
 <?php
 require_once('includes/connect.php');
-$query = 'SELECT projects.id AS project,project_name, img, cover_img FROM projects,files WHERE file_id = files.id';
-$results = mysqli_query($connect,$query);
+$stmt = $connection->prepare('SELECT projects.id AS project,project_name, img, cover_img FROM projects,files WHERE file_id = files.id');
+$stmt->execute();
 ?>
 
 <head>
@@ -89,19 +89,22 @@ motion designer.
 	
 	<?php
 	$cell = 0;
-	while ($row = mysqli_fetch_assoc($results)) {
+
+	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
 		if ($cell == 3) {
 			$cell = 1;
 		} else {
 			$cell++;
 		}
-		
+
+		$imageSrc = 'images/' . $row['cover_img'];
+
 		if ($cell == 1) {
-			echo '<img src="images/' . htmlspecialchars($row['cover_img']) . '" class="col-span-full m-col-start-1 m-col-span-4 img img_x3">';
+			echo '<img src="' . $imageSrc . '" class="col-span-full m-col-start-1 m-col-span-4 img img_x3">';
 		} else if ($cell == 2) {
-			echo '<img src="images/' . htmlspecialchars($row['cover_img']) . '" class="col-span-full m-col-start-5 m-col-span-4 img img_x3">';
+			echo '<img src="' . $imageSrc . '" class="col-span-full m-col-start-5 m-col-span-4 img img_x3">';
 		} else {
-			echo '<img src="images/' . htmlspecialchars($row['cover_img']) . '" class="col-span-full m-col-start-9 m-col-span-4 img img_x3">';
+			echo '<img src="' . $imageSrc . '" class="col-span-full m-col-start-9 m-col-span-4 img img_x3">';
 		}
 	}
 	?>

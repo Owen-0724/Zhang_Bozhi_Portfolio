@@ -2,9 +2,12 @@
 <html>
 <?php
 require_once('includes/connect.php');
-$query = 'SELECT * FROM projects,files WHERE file_id = files.id AND projects.id ='.$_GET['id'];
-$results = mysqli_query($connect,$query);
-$row = mysqli_fetch_assoc($results);
+
+$query = 'SELECT * FROM projects JOIN files ON file_id = files.id WHERE projects.id = :id';
+$stmt = $connection->prepare($query);
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
+$stmt->execute();
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
 $data = explode(',', $row['img']);
 ?>
 
