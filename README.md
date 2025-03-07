@@ -11,7 +11,7 @@ Contact page with Ajax form
 Fully scalable website layout
 
 ## Language
-HTML
+PHP
 
 CSS
 
