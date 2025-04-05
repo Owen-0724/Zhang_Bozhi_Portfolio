@@ -74,4 +74,46 @@ const player = new Plyr('video');
         }
     ) ;
 
+    const form = document.querySelector("#form");
+    const feedBack = document.querySelector("#feedback");
+
+    function regForm(event){
+        event.preventDefault();
+        const thisform = event.currentTarget;
+        const url = "adduser.php";
+        const formdata =
+        `email=${thisform.elements.email.value}&name=${thisform.elements.name.value}&topic=${thisform.elements.topic.value}&comments=${thisform.elements.comments.value}`;
+        console.log(formdata);
+
+        fetch(url,{
+            method:"POST",
+            headers: {
+                "Content-type":"application/x-www-form-urlencoded"
+            },
+            body: formdata
+        })
+        .then(response => response.json())
+        .then(response =>{
+            console.log(response);
+            feedBack.innerHTML = "";
+            if (response.errors) {
+                response.errors.forEach(error => {
+                    const errorElement = document.createElement("p");
+                    errorElement.textContent = error;
+                    feedBack.appendChild(errorElement);
+                })
+            }
+            else {
+                form.reset();
+                const messageElement = document.createElement("p");
+                messageElement.textContent = response.message;
+                feedBack.appendChild(messageElement);
+            }
+            feedBack.scrollIntoView({behavior: 'smooth', block:'end'})
+        })
+        .catch();
+    }
+
+    form.addEventListener("submit", regForm);
+
 })();

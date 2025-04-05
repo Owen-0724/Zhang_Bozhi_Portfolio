@@ -1,31 +1,43 @@
-*{
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Rajdhani, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;   
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+
+h2, a, pre{
     font-family: Polentical Neon, Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: normal;
-}
-
-h2{
-    font-size: 24px;
-    color: #2D2D2D;
-}
-
-a{
-    font-size: 20px;
+    font-size: 2.4rem;
     color: #2D2D2D;
     text-decoration: none;
 }
 
+h2{
+    font-weight: normal;
+}
+
+a{
+    font-size: 2rem;
+}
+
 p, pre{
-    font-size: 14px;
+    text-transform: uppercase;
+    font-size: 2rem;
     color: white;
 }
 
 #about_text{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
-h3, .case_p{
-    font-size: 12px;
+h3, .case_p,.case_date{
+    text-transform: uppercase;
+    font-size: 2rem;
 }
 
 h3{
@@ -73,7 +85,7 @@ h3{
     }
 
     p, pre{
-        font-size: 40px;
+        font-size: 30px;
     }
     
     a, h3, .case_p{

@@ -22,6 +22,18 @@
     margin-right: auto;
 }
 
+.footer div a{
+    font-size: 0px;
+}
+
+.footer div a img{
+    transition: transform 0.3s ease;
+}
+
+.footer div a img:hover{
+    filter: invert(100%) brightness(200%) contrast(100%);
+}
+
 /*---- tablet ----*/
 
 @media screen and (min-width: 768px) {
