@@ -14,7 +14,7 @@
 <body>
 <header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
-		<a href="index.php"  id="header_logo" class="l-col-start-1 l-col-end-2">
+		<a href="index.php"  id="header_logo" class="logo l-col-start-1 l-col-end-2">
 		<img src="images/logo.svg">
 		</a>
 		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
@@ -55,9 +55,8 @@
 	<footer class="grid-con footer">
 		<img src="images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
 		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
-			<img src="images/facebook.svg">
-			<img src="images/x.svg">
-			<img src="images/ins.svg">
+			<a href="https://www.linkedin.com/in/owen-zhang-91a809345/"  target="_blank"><img src="images/in.svg"></a>
+			<a href="https://www.instagram.com/owen_z___/"  target="_blank"><img src="images/ins.svg"></a>
 		</div>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

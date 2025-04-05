@@ -20,7 +20,7 @@ $stmt->execute();
 <body>
 	<header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
-		<a href="index.php"  id="header_logo" class="l-col-start-1 l-col-end-2">
+		<a href="index.php"  id="header_logo" class="logo l-col-start-1 l-col-end-2">
 		<img src="images/logo.svg">
 		</a>
 		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
@@ -59,8 +59,7 @@ $stmt->execute();
 
 		<pre class="col-start-1 col-end-5 l-col-start-1 l-col-end-13 m-col-start-3 m-col-end-11" id="short_description">
 I am Owen, 
-a graphic designer & 
-motion designer.
+a graphic designer & motion designer.
 
 		</pre>
 		<div class="spacing_160 col-span-full"></div>
@@ -127,14 +126,14 @@ motion designer.
 		<h2 class="hidden">CONTACT</h2>
 		<img src="images/chat.svg" height="52px" class="col-span-full" id="chat_icon">
 		<p class="col-start-2 col-span-2 m-col-start-5 m-col-span-4 l-col-start-5 l-col-span-4 " id="contct_now"><a href="contact.php">CONTACT NOW</a></p>
+		<p class="col-start-2 col-span-2 m-col-start-5 m-col-span-4 l-col-start-5 l-col-span-4 " id="resume"><a href="https://drive.google.com/file/d/1g3ndZ7r_zh3t_8c9794CaMp4oxT1KDBS/view?usp=sharing"  target="_blank" rel="noopener noreferrer">resume</a></p>
 	</section>
 
 	<footer class="grid-con footer">
 		<img src="images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
 		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
-			<img src="images/facebook.svg">
-			<img src="images/x.svg">
-			<img src="images/ins.svg">
+			<a href="https://www.linkedin.com/in/owen-zhang-91a809345/"  target="_blank"><img src="images/in.svg"></a>
+			<a href="https://www.instagram.com/owen_z___/"  target="_blank"><img src="images/ins.svg"></a>
 		</div>
 	</footer>
 	
