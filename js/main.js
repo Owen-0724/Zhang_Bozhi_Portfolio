@@ -1,4 +1,75 @@
+import { initThemeToggle } from './themeToggle.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle({
+    buttonId: 'theme-toggle',
+    iconId: 'theme-icon', 
+    dayIcon: 'images/theme.svg',
+    nightIcon: 'images/theme.svg',
+  });
+});
 (() => {
+    // Initialize Lenis
+const lenis = new Lenis({
+    autoRaf: true,
+  });
+  
+  // Listen for the scroll event and log the event data
+  lenis.on('scroll', (e) => {
+    console.log(e);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const bgVideo = document.getElementById("bg-video");
+  
+    // Try autoplaying
+    if (bgVideo) {
+      const playPromise = bgVideo.play();
+  
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log("Video autoplayed successfully.");
+          })
+          .catch(() => {
+            console.log("Autoplay blocked. Waiting for user interaction...");
+            // Try playing on first click/tap
+            const tryPlay = () => {
+              bgVideo.play();
+              document.removeEventListener("click", tryPlay);
+              document.removeEventListener("touchstart", tryPlay);
+            };
+            document.addEventListener("click", tryPlay);
+            document.addEventListener("touchstart", tryPlay);
+          });
+      }
+    }
+  });
+  
+  let lastScroll = 0;
+  const header = document.querySelector("header");
+  
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+  
+    // Show header if at top or scrolling up
+    if (currentScroll <= 0 || currentScroll < lastScroll) {
+      header.classList.remove("hide-header");
+    } else if (currentScroll > lastScroll && currentScroll > 50) {
+      // Hide header when scrolling down
+      header.classList.add("hide-header");
+    }
+  
+    lastScroll = currentScroll;
+  });
+  
+
+  
+  
+
+
+
+
 const player = new Plyr('video');
 
     (function(){
@@ -16,7 +87,7 @@ const player = new Plyr('video');
     button.addEventListener("click", hamburgerMenu, false);   
     })();
     
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
     gsap.utils.toArray(".line_r").forEach((line) => {

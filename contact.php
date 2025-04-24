@@ -17,11 +17,16 @@
 		<a href="index.php"  id="header_logo" class="logo l-col-start-1 l-col-end-2">
 		<img src="images/logo.svg">
 		</a>
-		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
+		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-8 l-col-end-13">
 			<ul>
 				<li><a href="projects.php">PROJECTS</a></li>
 				<li><a href="about.php">ABOUT</a></li>
 				<li><a href="contact.php">CONTACT</a></li>
+				<li>
+					<button id="theme-toggle" aria-label="Toggle Theme">
+						<img id="theme-icon" src="images/theme.svg" alt="Toggle Theme" width="20px">
+					</button>
+				</li>	
 			</ul>
 		</div>
 		<img src="images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
@@ -62,5 +67,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+	<script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script> 
+
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

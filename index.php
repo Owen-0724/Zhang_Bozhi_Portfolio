@@ -18,16 +18,25 @@ $stmt->execute();
 	<title>Portfolio</title>
 </head>
 <body>
+	<video autoplay muted loop playsinline preload="auto" id="bg-video">
+	<source src="video/loop.mp4" type="video/mp4">
+	</video>
+	
 	<header class="grid-con">
 		<h1 class="hidden">Portfolio</h1>
 		<a href="index.php"  id="header_logo" class="logo l-col-start-1 l-col-end-2">
 		<img src="images/logo.svg">
 		</a>
-		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13">
+		<div id="menu" class="m-col-start-7 m-col-end-13 l-col-start-8 l-col-end-13">
 			<ul>
 				<li><a href="projects.php">PROJECTS</a></li>
 				<li><a href="about.php">ABOUT</a></li>
 				<li><a href="contact.php">CONTACT</a></li>
+				<li>
+					<button id="theme-toggle" aria-label="Toggle Theme">
+						<img id="theme-icon" src="images/theme.svg" alt="Toggle Theme" width="20px">
+					</button>
+				</li>	
 			</ul>
 		</div>
 		<img src="images/bar.svg" class="col-start-4 col-end-5 hidden" id="bar" height="17px">
@@ -45,21 +54,15 @@ $stmt->execute();
 		<h2 class="hidden">top</h2>
 		<div class="spacing_160 col-span-full  m-col-start-3 m-col-end-11"></div>
 		<div class="col-start-1 col-end-5 l-col-start-1 l-col-end-13  m-col-start-3 m-col-end-11" id="welcome_stack">
-			<p class="home_welcome" id="home_welcome_1">
-				WELCOME
-			</p>
-			<p class="home_welcome" id="home_welcome_2">
-				WELCOME
-			</p>
-			<p class="home_welcome" id="home_welcome_3">
-				WELCOME
-			</p>
+			
 		</div>
 		<div class="spacing_80 col-span-full moblie_spacing"></div>
 
-		<pre class="col-start-1 col-end-5 l-col-start-1 l-col-end-13 m-col-start-3 m-col-end-11" id="short_description">
+		<pre class="col-start-1 col-end-5 l-col-start-1 l-col-end-7 m-col-start-3 m-col-end-7" id="short_description">
+Hello
 I am Owen, 
-a graphic designer & motion designer.
+graphic designer
+motion designer.
 
 		</pre>
 		<div class="spacing_160 col-span-full"></div>
@@ -75,7 +78,7 @@ a graphic designer & motion designer.
 
 		<div class="col-start-1 fill_l"></div>
 
-		<div class="player_l col-start-1 col-end-5 m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12">
+		<div class="player_l col-start-1 col-end-5 m-col-start-1 m-col-end-13">
 			<video class="player" id="video_1" poster="images/demo_reel.jpg">
 				<source src="video/demo_reel.mp4" type="video/mp4">
 				<p>Ooops, something went wrong. You may be using an oudated browser or have javascript disabled.</p>
@@ -132,7 +135,7 @@ a graphic designer & motion designer.
 	<footer class="grid-con footer">
 		<img src="images/logo.svg" class="logo col-start-1 col-span-2 footer_logo">
 		<div class="col-start-2 col-span-2 m-col-start-10 m-col-span-3 l-col-start-11 l-col-end-13 social_media_group">
-			<a href="https://www.linkedin.com/in/owen-zhang-91a809345/"  target="_blank"><img src="images/in.svg"></a>
+			<a href="www.linkedin.com/in/owen-zhang-91a809345"  target="_blank"><img src="images/in.svg"></a>
 			<a href="https://www.instagram.com/owen_z___/"  target="_blank"><img src="images/ins.svg"></a>
 		</div>
 	</footer>
@@ -140,6 +143,37 @@ a graphic designer & motion designer.
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-	<script src="js/main.js" defer></script>
+
+	<script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script> 
+
+	<script type="module" src="js/main.js"></script>
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const bgVideo = document.getElementById("bg-video");
+
+  if (bgVideo) {
+    bgVideo.muted = true; // ensure it's muted
+    const playPromise = bgVideo.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          console.log("Background video autoplayed!");
+        })
+        .catch((error) => {
+          console.warn("Autoplay blocked, waiting for user interaction...");
+          const tryPlay = () => {
+            bgVideo.play();
+            document.removeEventListener("click", tryPlay);
+            document.removeEventListener("touchstart", tryPlay);
+          };
+          document.addEventListener("click", tryPlay);
+          document.addEventListener("touchstart", tryPlay);
+        });
+    }
+  }
+});
+</script>
+
 </body>
 </html>
