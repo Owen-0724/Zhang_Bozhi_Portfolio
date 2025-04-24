@@ -40,7 +40,7 @@ a {
 p, pre {
   text-transform: uppercase;
   font-size: 2rem;
-  color: white;
+  color: var(--text-color);
 }
 
 #about_text {
@@ -96,6 +96,8 @@ h3 {
 }
 button {
   border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #burger {
@@ -113,7 +115,7 @@ button {
 
 header {
   line-height: 80px;
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
 }
 
 #header_logo {
@@ -121,14 +123,18 @@ header {
 }
 
 header, #burger-con {
+  transition: transform 0.3s ease-in-out;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
+}
+
+.hide-header {
+  transform: translateY(-100%);
 }
 
 #menu {
   display: none;
-  line-height: 0px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -142,7 +148,10 @@ header, #burger-con {
 }
 
 #menu ul li {
-  display: inline;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #bar {
@@ -180,6 +189,20 @@ header, #burger-con {
   color: white;
 }
 
+#theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 auto;
+}
+#theme-toggle img {
+  display: block;
+}
+
 /*---- tablet ----*/
 @media screen and (min-width: 768px) {
   header {
@@ -197,8 +220,10 @@ header, #burger-con {
 }
 .footer {
   height: 80px;
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
   margin-top: 60px;
+  z-index: 9999;
+  position: relative;
 }
 
 .footer_logo {
@@ -250,22 +275,39 @@ header, #burger-con {
     height: 40px;
   }
 }
+:root {
+  --bg-color: #e0e0e0;
+  --text-color: #0F0F0F;
+  --text-color-2: #000000;
+  --accent-color: #0BC6FF;
+}
+
+body.night-mode {
+  --bg-color: #0F0F0F;
+  --text-color: #e0e0e0;
+  --accent-color: #0BC6FF;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .more_info {
   font-size: 20px;
-  color: #2D2D2D;
+  color: var(--bg-color);
   text-align: center;
   align-content: center;
   height: 24px;
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
 }
 
 #contct_now, #resume {
   font-size: 16px;
-  color: #2D2D2D;
+  color: var(--bg-color);
   text-align: center;
   align-content: center;
   height: 24px;
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
   margin-top: 20px;
 }
 
@@ -274,7 +316,7 @@ header, #burger-con {
 }
 
 .fill_l {
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
   height: 100%;
   width: 37px;
   grid-row: 2;
@@ -284,7 +326,7 @@ header, #burger-con {
 
 .line_h2 {
   height: 30px;
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
   margin-top: 60px;
   margin-bottom: 20px;
 }
@@ -324,10 +366,14 @@ header, #burger-con {
     height: 60px;
     margin-top: 200px;
     margin-bottom: 120px;
+    -webkit-clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
+            clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
   }
   .more_info {
     font-size: 24px;
     height: 40px;
+    -webkit-clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
+            clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
   }
   .line_r {
     margin-left: 35%;
@@ -339,16 +385,28 @@ header, #burger-con {
     font-size: 24px;
     margin-top: 40px;
     height: 40px;
+    -webkit-clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
+            clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
   }
 }
-html {
-  background-color: #2D2D2D;
+body {
+  background-color: var(--bg-color);
 }
 
-#welcome_stack {
-  align-items: center;
-  justify-items: center;
-  grid-auto-flow: column;
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  pointer-events: none; /* so clicks pass through */
+}
+
+p, pre {
+  z-index: 9998;
 }
 
 .home_welcome {
@@ -362,9 +420,14 @@ html {
 }
 
 #short_description {
-  text-align: center;
+  text-align: left;
   line-height: 30px;
-  color: #26E3FF;
+  padding-left: 30px;
+  padding-top: 30px;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  -webkit-clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
+          clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%, 0% 20px);
 }
 
 #up_icon {
@@ -445,7 +508,7 @@ html {
   }
 }
 #contact_form form input, #contact_form form textarea {
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
   padding: 10px;
   border: 0px;
   margin-top: 40px;
@@ -530,7 +593,7 @@ input::placeholder, textarea::placeholder {
 
 .case_text {
   height: 30px;
-  background-color: #26E3FF;
+  background-color: var(--accent-color);
 }
 
 #case_1 {

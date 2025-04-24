@@ -1,5 +1,7 @@
 button{
     border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #burger{
@@ -18,7 +20,7 @@ button{
 
 header{
     line-height: 80px;
-    background-color: #26E3FF;
+    background-color: var(--accent-color);
 }
 
 #header_logo{
@@ -26,14 +28,23 @@ header{
 }
 
 header, #burger-con{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+
+        transition: transform 0.3s ease-in-out;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+      }
+      
+      .hide-header {
+        transform: translateY(-100%);
+      }
+      
+      
+      
 
 #menu{
     display: none;
-    line-height: 0px;
+
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -48,7 +59,10 @@ header, #burger-con{
 }
 
 #menu ul li{
-    display: inline;
+    list-style: none;
+     display: flex;
+    align-items: center;
+     justify-content: center;
 }
 
 
@@ -89,6 +103,19 @@ header, #burger-con{
     color: white;
 }
 
+#theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; // optional, clean edges
+    margin: 0 auto; // horizontal centering if block-level 
+    img {
+      display: block;
+    }
+  }
 /*---- tablet ----*/
 
 @media screen and (min-width: 768px) {

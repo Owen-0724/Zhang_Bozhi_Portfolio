@@ -1,21 +1,39 @@
+:root {
+    --bg-color: #e0e0e0;
+    --text-color: #0F0F0F;
+    --text-color-2: #000000;
+    --accent-color: #0BC6FF;
+
+}
+  
+body.night-mode {
+    --bg-color: #0F0F0F;
+    --text-color: #e0e0e0;
+    --accent-color: #0BC6FF;
+}
+  
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .more_info{
     font-size: 20px;
-    color: #2D2D2D;
+    color: var(--bg-color);
     text-align: center;
     align-content:  center;
     
     height: 24px;
-    background-color: #26E3FF;
+    background-color: var(--accent-color);
 }
 
 #contct_now, #resume{
     font-size: 16px;
-    color: #2D2D2D;
+    color: var(--bg-color);
     text-align: center;
     align-content:  center;
     
     height: 24px;
-    background-color: #26E3FF;
+    background-color: var(--accent-color);
 
     margin-top: 20px;
 }
@@ -25,7 +43,7 @@
 }
 
 .fill_l{
-    background-color: #26E3FF;
+    background-color: var(--accent-color);
     height: 100%;
     width: 37px;
     grid-row: 2;
@@ -35,7 +53,7 @@
 
 .line_h2{
     height: 30px;
-    background-color: #26E3FF;
+    background-color: var(--accent-color);
     margin-top: 60px;
     margin-bottom: 20px;
 }
@@ -85,11 +103,27 @@
         height: 60px;
         margin-top: 200px;
         margin-bottom: 120px;
+        clip-path: polygon(
+    20px 0%,               /* top-left bevel */
+    calc(100% - 20px) 0%,  /* top-right bevel */
+    100% 20px,             /* continue from right bevel */
+    100% 100%,             /* bottom right */
+    0% 100%,               /* bottom left */
+    0% 20px                /* continue from left bevel */
+  );
     }
 
     .more_info{
        font-size: 24px; 
        height: 40px;
+       clip-path: polygon(
+    20px 0%,               /* top-left bevel */
+    calc(100% - 20px) 0%,  /* top-right bevel */
+    100% 20px,             /* continue from right bevel */
+    100% 100%,             /* bottom right */
+    0% 100%,               /* bottom left */
+    0% 20px                /* continue from left bevel */
+  );
     }
 
     .line_r{
@@ -104,5 +138,13 @@
         font-size: 24px;
         margin-top: 40px;
         height: 40px;
+        clip-path: polygon(
+    20px 0%,               /* top-left bevel */
+    calc(100% - 20px) 0%,  /* top-right bevel */
+    100% 20px,             /* continue from right bevel */
+    100% 100%,             /* bottom right */
+    0% 100%,               /* bottom left */
+    0% 20px                /* continue from left bevel */
+  );
     }
 }

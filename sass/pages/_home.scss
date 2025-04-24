@@ -1,13 +1,24 @@
-html{
-    background-color: #2D2D2D;
+body{
+    background-color: var(--bg-color);
 }
 
-#welcome_stack{
-    
-    align-items: center;
-    justify-items: center;
-    grid-auto-flow: column;
+
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none; /* so clicks pass through */
+  }
+
+p,pre{
+    z-index: 9998;
 }
+    
 
 .home_welcome{
     font-family: Induction, Arial, Helvetica, sans-serif;
@@ -24,9 +35,21 @@ html{
 }
 
 #short_description{
-    text-align: center;
+    text-align: left;
     line-height: 30px;
-    color: #26E3FF;
+    padding-left: 30px;
+    padding-top: 30px;
+    color: var(--bg-color);
+    background-color: var(--accent-color);
+
+    clip-path: polygon(
+    20px 0%,               /* top-left bevel */
+    calc(100% - 20px) 0%,  /* top-right bevel */
+    100% 20px,             /* continue from right bevel */
+    100% 100%,             /* bottom right */
+    0% 100%,               /* bottom left */
+    0% 20px                /* continue from left bevel */
+  );
 }
 
 #up_icon{
